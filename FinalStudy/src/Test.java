@@ -1,3 +1,4 @@
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Test {
 
@@ -22,6 +23,17 @@ public class Test {
 		Thread t1 = new Thread(q3);
 		t1.start();
 		q4.start();
+		
+		System.out.println();
+		//Test of ATM
+		ATM atm = new ATM(1000);
+		ReentrantLock myLock = new ReentrantLock();
+		Users u1 = new Users(atm, 500, myLock);
+		Users u2 = new Users(atm, 700, myLock);
+		Users u3 = new Users(atm, 300, myLock);
+		u1.start();
+		u2.start();
+		u3.start();
 	}
 
 
