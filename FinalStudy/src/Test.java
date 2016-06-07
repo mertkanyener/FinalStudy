@@ -31,14 +31,18 @@ public class Test {
 		Users u1 = new Users(atm, 500, myLock);
 		Users u2 = new Users(atm, 700, myLock);
 		Users u3 = new Users(atm, 300, myLock);
-		u1.start();
+		/*u1.start();
 		u2.start();
 		u3.start();
-		
+		*/
 		System.out.println();
 		// Test of ThreadPools
 		PoolTest pt = new PoolTest();
-		pt.start();
+		//pt.start();
+		
+		//Fruit test
+		Fruit fr = new Fruit("Red",0.99,1.0,2016,"Apple");
+		System.out.println(fr);
 	}
 
 
