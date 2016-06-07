@@ -8,7 +8,7 @@ public class ATM {
 	}
 	
 	public void getMoney(double money){
-		if(money >= balance){
+		if(money <= balance){
 			System.out.println("You are able to get "+ money + "$");
 			balance = balance - money;
 		}

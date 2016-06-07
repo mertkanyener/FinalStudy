@@ -34,6 +34,11 @@ public class Test {
 		u1.start();
 		u2.start();
 		u3.start();
+		
+		System.out.println();
+		// Test of ThreadPools
+		PoolTest pt = new PoolTest();
+		pt.start();
 	}
 
 
